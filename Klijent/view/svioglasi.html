@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Svi Oglasi</title>
+    <style>
+        th {background-color:blue;}
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="/svioglasi" style="font-size: 20px ;">Prikazi sve oglase</a>
+        &nbsp;  &nbsp;  &nbsp;  &nbsp;
+        <a href="/dodajoglas" style="font-size: 20px ;">Dodaj oglas</a>
+    </nav>
+    <br><br>
+
+    <div>
+        <form action="/filtrirajbykategorija" method="POST">
+            <label for="" style="font-size: 16px ;">Naziv kategorije</label>
+            <select name="kategorije" id="kategorije">
+                <option value="Automobili">Automobili</option>
+                <option value="Stanovi">Stanovi</option>
+                <option value="Alati">Alati</option>
+                <option value="Poducavanje">Poducavanje</option>
+            </select>
+            <button type="submit">Filtriraj</button>
+        </form>
+    </div>
+     <br><br>
+    <table cellpadding="28" cellspacing="50">
+        <thead>
+            <tr>
+                <th>ID</td>
+                <th>Kategorija</td>
+                <th>Datum isteka</td>
+                <th>Cena</td>
+                <th>Valuta</th>
+                <th>Tekst oglasa</td>
+                <th>Oznaka</td>
+                <th>E-mail</td>
+            </tr>
+        </thead>
+        <tbody>
+            #{data}
+        </tbody>
+    </table>
+
+
+</body>
+</html>

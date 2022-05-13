@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add oglasa</title>
+</head>
+<body>
+    
+    <nav>
+        <a href="/svioglasi" style="font-size: 20px ;">Prikazi sve oglase</a>
+        &nbsp;  &nbsp;  &nbsp;  &nbsp;
+        <a href="/dodajoglas" style="font-size: 20px ;">Dodaj oglas</a>
+    </nav>
+    <br><br>
+
+    <h3>Forma za dodavanje oglasa</h3><br>
+
+    <form action="/snimioglas" method="POST">
+        <label for="" style="font-size: 16px ;">Naziv kategorije</label>
+        <select name="kategorije" id="kategorije">
+            <option value="Automobili">Automobili</option>
+            <option value="Stanovi">Stanovi</option>
+            <option value="Alati">Alati</option>
+            <option value="Poducavanje">Poducavanje</option>
+        </select><br><br>
+        <label for="" style="font-size: 16px ;">Datum isteka</label><input type="date" id="datum_isteka" name="datum_isteka"><br><br>
+        <label for="" style="font-size: 16px ;">Cena</label><input type="number" id=""name="cena" min="0">
+        <select name="valuta" id="valuta">
+            <option value="DIN">DIN</option>
+            <option value="EUR">EUR</option>
+            <option value="DOL">DOL</option>
+        </select><br><br>
+         <br><br>
+        <textarea name="tekst_oglasa" id="" cols="30" rows="10" minlength="10" maxlength="180" placeholder="Unesite tekst oglasa"></textarea><br><br>
+        <label for="" style="font-size: 16px ;">Oznaka</label><input type="text" name="oznaka" minlength="3"><br><br>
+        <label for="" style="font-size: 16px ;">E-mail</label><input type="email" name="e_posta"><br><br>
+        <button type="submit">Snimi oglas</button>
+    </form>
+
+    
+</body>
+</html>
