@@ -1,0 +1,11 @@
+    <!ELEMENT Oglasi (Oglas)*>
+    <!ELEMENT Oglas (KategorijaOglasa,DatumIstekaOglasa,Cena,TekstOglasa,(Oznaka)+,(Email)+)>
+    <!ELEMENT KategorijaOglasa EMPTY>
+    <!ELEMENT DatumIstekaOglasa (#PCDATA)>
+    <!ELEMENT Cena (#PCDATA)>
+    <!ELEMENT TekstOglasa (#PCDATA)>
+    <!ELEMENT Oznaka (#PCDATA)>
+    <!ELEMENT Email (#PCDATA)>
+    <!ATTLIST KategorijaOglasa kategorija (automobili|stanovi|alati|poducavanje) #REQUIRED>
+    <!ATTLIST Cena valuta (euri|dolari|dinari) "dinari">
+    <!ATTLIST Email tip (privatni|sluzbeni) #REQUIRED>

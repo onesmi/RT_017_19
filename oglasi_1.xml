@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE Oglasi SYSTEM "oglasi.dtd">
+
+<Oglasi>
+
+    <Oglas>
+        <KategorijaOglasa kategorija="automobili"></KategorijaOglasa>
+        <DatumIstekaOglasa>05.05.2022</DatumIstekaOglasa>
+        <Cena valuta="dinari">150000</Cena>
+        <TekstOglasa>Auto je vrlo malo vozen</TekstOglasa>
+        <Oznaka>auto</Oznaka>
+        <Oznaka>aut</Oznaka>
+        <Email tip="privatni">primer@gmail.com</Email>
+        <Email tip="sluzbeni">primer2@gmail.com</Email>
+    </Oglas>
+    
+    <Oglas>
+        <KategorijaOglasa kategorija="stanovi"></KategorijaOglasa>
+        <DatumIstekaOglasa>05.05.2022</DatumIstekaOglasa>
+        <Cena valuta="euri">150000</Cena>
+        <TekstOglasa>Nova gradnja</TekstOglasa>
+        <Oznaka>stanovi</Oznaka>
+        <Oznaka>stan</Oznaka>
+        <Email tip="privatni">primer@gmail.com</Email>
+        <Email tip="sluzbeni">primer2@gmail.com</Email>
+    </Oglas>
+
+    <Oglas>
+        <KategorijaOglasa kategorija="alati"></KategorijaOglasa>
+        <DatumIstekaOglasa>05.05.2022</DatumIstekaOglasa>
+        <Cena>15000</Cena>
+        <TekstOglasa>Veoma povoljno</TekstOglasa>
+        <Oznaka>alati</Oznaka>
+        <Oznaka>cekici</Oznaka>
+        <Email tip="privatni">primer@gmail.com</Email>
+        <Email tip="sluzbeni">primer2@gmail.com</Email>
+    </Oglas>
+
+</Oglasi>
