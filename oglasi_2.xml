@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding='UTF-8'?>
+
+<Oglasi xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Oglas xsi:noNamespaceSchemaLocation="oglasi2.xsd">
+        <KategorijaOglasa>
+            <Kategorije>Automobili</Kategorije>
+            <Kategorije>Stanovi</Kategorije>
+        </KategorijaOglasa>
+        <DatumIstekaOglasa>2022-12-05</DatumIstekaOglasa>
+        <Cena valuta="dinari">150000</Cena>
+        <TekstOglasa>Auto je vrlo malo vozen</TekstOglasa>
+        <Oznaka>auto</Oznaka>
+        <Oznaka>aut</Oznaka>
+        <Email tip="privatni">primer@gmail.com</Email>
+    </Oglas>
+
+    <Oglas xsi:noNamespaceSchemaLocation="oglasi2.xsd">
+        <KategorijaOglasa>
+            <Kategorije>Automobili</Kategorije>
+            <Kategorije>Poducavanje</Kategorije>
+        </KategorijaOglasa>
+        <DatumIstekaOglasa>2022-10-05</DatumIstekaOglasa>
+        <Cena valuta="dinari">150000</Cena>
+        <TekstOglasa>Super ponuda, jos malo pa je istekla</TekstOglasa>
+        <Oznaka>poducavanje</Oznaka>
+        <Oznaka>automobili</Oznaka>
+        <Email tip="privatni">primer2@gmail.com</Email>
+        <Email tip="privatni">prime3@gmail.com</Email>
+    </Oglas>
+
+    <Oglas xsi:noNamespaceSchemaLocation="oglasi2.xsd">
+        <KategorijaOglasa>
+            <Kategorije>Stanovi</Kategorije>
+        </KategorijaOglasa>
+        <DatumIstekaOglasa>2022-10-05</DatumIstekaOglasa>
+        <Cena valuta="euri">150000</Cena>
+        <TekstOglasa>Super ponuda, jos malo pa je istekla</TekstOglasa>
+        <Oznaka>nekretnine</Oznaka>
+        <Email tip="privatni">primer4@gmail.edu.rs</Email>
+        <Email tip="privatni">prime5.primer@gmail.com</Email>
+    </Oglas>
+
+</Oglasi>

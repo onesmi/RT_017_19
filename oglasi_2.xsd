@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding='UTF-8'?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+   <xs:simpleType name="restrictedValue">
+        <xs:restriction base="xs:double">
+            <xs:minInclusive value="0"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="restrictedEmail">
+        <xs:restriction base="xs:string">
+            <!--<xs:pattern value="[\w]+@[\w]+(\.\w{2,3})+"/>-->
+            <xs:pattern value="[\w]+([.-]?\w+)*@[\w]+(\.\w{2,3})+"/>
+
+        </xs:restriction>
+    </xs:simpleType>
+
+          
+    <xs:element name="Oglasi">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Oglas" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+
+                            <!--KategorijaOglasa (AKO SE RADI SA KATEGORIJAMA KAO ATRIBUTIMA)
+                            <xs:element name="KategorijaOglasa" maxOccurs="1">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension base="xs:string">
+                                            <xs:attribute name="kategorije" use="required">
+                                                <xs:simpleType>
+                                                    <xs:restriction base="xs:string"> 
+                                                        <xs:enumeration value="automobili"/>
+                                                        <xs:enumeration value="stanovi"/>
+                                                        <xs:enumeration value="alati"/>
+                                                        <xs:enumeration value="poducavanje"/>
+                                                    </xs:restriction>
+                                                </xs:simpleType>    
+                                            </xs:attribute>
+                                        </xs:extension>        
+                                    </xs:simpleContent>
+                                </xs:complexType>    
+                             </xs:element>-->
+                            
+                             <!--KategorijaOglasa (AKO SE RADI SA KATEGORIJAMA KAO ELEMENTIMA)-->
+                            <xs:element name="KategorijaOglasa" maxOccurs="1">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="Kategorije" maxOccurs="unbounded">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:enumeration value="Automobili"/>
+                                                    <xs:enumeration value="Stanovi"/>
+                                                    <xs:enumeration value="Alati" />
+                                                    <xs:enumeration value="Poducavanje"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>    
+                             </xs:element>
+
+
+                            <!--DatumIstekaOglasa-->
+                            <xs:element name="DatumIstekaOglasa" maxOccurs="1">
+                                <xs:simpleType>
+                                        <xs:restriction base="xs:date">
+                                            <xs:pattern value="\d\d\d\d-\d\d-\d\d"/>
+                                        </xs:restriction>  
+                                 </xs:simpleType>     
+                            </xs:element>
+
+                            <!--Cena-->
+                            <xs:element name="Cena" maxOccurs="1">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension base="restrictedValue"> 
+                                            <xs:attribute name="valuta" default="dinari">
+                                                <xs:simpleType>
+                                                    <xs:restriction base="xs:string">
+                                                        <xs:pattern value="dinari|dolari|euri"/>
+                                                    </xs:restriction>
+                                                </xs:simpleType>    
+                                            </xs:attribute>
+                                        </xs:extension>         
+                                    </xs:simpleContent>        
+                                </xs:complexType>    
+                            </xs:element>
+      
+
+                            <!--TekstOglasa-->
+                            <xs:element name="TekstOglasa" maxOccurs="1">
+                                 <xs:simpleType>
+                                        <xs:restriction base="xs:string">
+                                            <xs:minLength value="10"/>
+                                            <xs:maxLength value="180"/>
+                                        </xs:restriction>
+                                 </xs:simpleType>
+                            </xs:element>
+      
+                            <!--Oznaka-->
+                            <xs:element name="Oznaka" type="xs:string" maxOccurs="unbounded">
+                            </xs:element>
+      
+                            <!--Email-->
+                            <xs:element name="Email" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension base="restrictedEmail">
+                                            <xs:attribute name="tip" use="required">
+                                                <xs:simpleType>
+                                                    <xs:restriction base="xs:string">
+                                                        <xs:pattern value="privatni|sluzbeni"/>
+                                                    </xs:restriction>
+                                                </xs:simpleType>    
+                                            </xs:attribute>
+                                        </xs:extension>    
+                                    </xs:simpleContent>         
+                                </xs:complexType>    
+                            </xs:element>
+
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>        
+            </xs:sequence>        
+        </xs:complexType>          
+    </xs:element>
+</xs:schema>
