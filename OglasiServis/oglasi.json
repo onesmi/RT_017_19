@@ -1,0 +1,6 @@
+[
+    {"kategorija":"Automobili","datum_isteka":"2022-05-03","cena":"50000","tekst_oglasa":"super povoljan auto","oznaka":"auto","e_posta":"pera@gmail.com","valuta":"EUR","id":1},
+    {"kategorija":"Stanovi","datum_isteka":"2022-06-03","cena":"150000","tekst_oglasa":"super povoljan stan","oznaka":"nekretnine","e_posta":"mika@gmail.com","valuta":"EUR","id":2},
+    {"kategorija":"Alati","datum_isteka":"2022-07-03","cena":"5000","tekst_oglasa":"super povoljan alat","oznaka":"alati","e_posta":"zika@gmail.com","valuta":"DIN","id":3},
+    {"kategorija":"Poducavanje","datum_isteka":"2022-08-03","cena":"10000","tekst_oglasa":"super povoljan kurs","oznaka":"kurs","e_posta":"ana@gmail.com","valuta":"DIN","id":4}
+ ]
